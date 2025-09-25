@@ -2,64 +2,110 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
+    { name: "About Us", href: "/about" },
     { name: "Projects", href: "/projects" },
-    { name: "Contact", href: "/contact" },
+    { name: "Agents", href: "/agents" },
+    { name: "Services", href: "/services" },
+    { name: "Listings", href: "/listings" },
   ];
 
   return (
-    <nav className="w-full sticky top-0 z-50 bg-white shadow-md px-6 py-4 flex justify-between items-center">
-      <div className="text-2xl font-bold text-[#C01920]">
-        NextGen Constructions
-      </div>
+    <nav className="w-full sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-md">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+        {/* Logo */}
+        <Link
+          href="/"
+          className="text-2xl font-extrabold tracking-wide text-[#3B1A1E]"
+        >
+          Nexgen
+        </Link>
 
-      <ul className="hidden md:flex gap-8">
-        {navLinks.map((link) => (
-          <li key={link.href}>
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex gap-8 items-center">
+          {navLinks.map((link) => (
+            <li key={link.href} className="relative group">
+              <Link
+                href={link.href}
+                className={`transition font-medium ${
+                  pathname === link.href
+                    ? "text-[#3B1A1E]"
+                    : "text-gray-700 hover:text-[#DDBF9E]"
+                }`}
+              >
+                {link.name}
+              </Link>
+              {/* underline animation */}
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#DDBF9E] transition-all duration-300 group-hover:w-full"></span>
+            </li>
+          ))}
+
+          {/* CTA Button */}
+          <li>
             <Link
-              href={link.href}
-              className={`hover:text-[#C01920] ${
-                pathname === link.href
-                  ? "text-[#C01920] font-bold"
-                  : "text-gray-700"
-              }`}
+              href="/contact"
+              className="px-5 py-2 rounded-md bg-gradient-to-r from-[#c0a060] to-[#ffd700] text-black font-semibold shadow-md hover:shadow-lg hover:opacity-90 transition-all duration-300"
             >
-              {link.name}
+              Contact Us
             </Link>
           </li>
-        ))}
-      </ul>
+        </ul>
 
-      <div className="md:hidden">
-        <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? "X" : "☰"}</button>
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-[#3B1A1E] text-2xl focus:outline-none"
+          >
+            {isOpen ? "✕" : "☰"}
+          </button>
+        </div>
       </div>
 
-      {isOpen && (
-        <div className="absolute top-16 left-0 w-full bg-white flex flex-col items-center gap-6 py-6 md:hidden">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className={`hover:text-[#C01920] ${
-                pathname === link.href
-                  ? "text-[#C01920] font-bold"
-                  : "text-gray-700"
-              }`}
-            >
-              {link.name}
-            </Link>
-          ))}
-        </div>
-      )}
+      {/* Mobile Menu with Framer Motion */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden bg-white/95 backdrop-blur-lg shadow-lg"
+          >
+            <div className="flex flex-col items-center gap-6 py-6">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className={`transition font-medium ${
+                    pathname === link.href
+                      ? "text-[#3B1A1E]"
+                      : "text-gray-700 hover:text-[#DDBF9E]"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+
+              {/* CTA Button in Mobile */}
+              <Link
+                href="/contact"
+                onClick={() => setIsOpen(false)}
+                className="px-5 py-2 rounded-md bg-gradient-to-r from-[#c0a060] to-[#ffd700] text-black font-semibold shadow-md hover:shadow-lg hover:opacity-90 transition-all duration-300"
+              >
+                Contact Us
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
