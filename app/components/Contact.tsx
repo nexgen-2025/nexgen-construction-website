@@ -60,7 +60,7 @@ const Contact = () => {
               <input
                 type="hidden"
                 name="access_key"
-                value="YOUR-WEB3FORMS-ACCESS-KEY"
+                value="47f1dcb8-5be7-4ff3-8c29-09fd95403cff"
               />
 
               <div>
