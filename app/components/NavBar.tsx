@@ -9,11 +9,11 @@ const Navbar = () => {
   const pathname = usePathname();
 
   const navLinks = [
-    { name: "About Us", href: "/about" },
-    { name: "Projects", href: "/projects" },
-    { name: "Agents", href: "/agents" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
-    { name: "Listings", href: "/listings" },
+    { name: "Projects", href: "/projects" },
+    { name: "Gallery", href: "/gallery" },
   ];
 
   return (
@@ -33,20 +33,23 @@ const Navbar = () => {
             <li key={link.href} className="relative group">
               <Link
                 href={link.href}
-                className={`transition font-medium ${
+                className={`transition font-medium text-lg ${
                   pathname === link.href
-                    ? "text-[#3B1A1E]"
+                    ? "text-[#3B1A1E] font-bold"
                     : "text-gray-700 hover:text-[#DDBF9E]"
                 }`}
               >
                 {link.name}
+                <span
+                  className={`absolute left-0 -bottom-1 h-[2px] bg-[#DDBF9E] transition-all duration-300 ${
+                    pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                ></span>
               </Link>
-              {/* underline animation */}
-              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#DDBF9E] transition-all duration-300 group-hover:w-full"></span>
             </li>
           ))}
 
-          {/* CTA Button */}
+          {/* Contact Us Button */}
           <li>
             <Link
               href="/contact"
@@ -68,7 +71,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu with Framer Motion */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -84,9 +87,9 @@ const Navbar = () => {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className={`transition font-medium ${
+                  className={`text-lg font-medium transition ${
                     pathname === link.href
-                      ? "text-[#3B1A1E]"
+                      ? "text-[#3B1A1E] font-bold"
                       : "text-gray-700 hover:text-[#DDBF9E]"
                   }`}
                 >
@@ -94,7 +97,6 @@ const Navbar = () => {
                 </Link>
               ))}
 
-              {/* CTA Button in Mobile */}
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
