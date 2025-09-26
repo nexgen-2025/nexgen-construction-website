@@ -18,26 +18,26 @@ const projects = [
   {
     id: 1,
     category: "Before & After",
-    before: "/before1.jpg",
-    after: "/after1.jpg",
+    before: "/hero7.jpg",
+    after: "/hero5.jpg",
     title: "Villa Renovation – Coimbatore",
   },
   {
     id: 2,
     category: "Residential",
-    img: "/residential1.jpg",
+    img: "/hero1.jpg",
     title: "Luxury Apartment – Chennai",
   },
   {
     id: 3,
     category: "Commercial",
-    img: "/commercial1.jpg",
+    img: "/hero2.jpg",
     title: "Corporate Office – Bangalore",
   },
   {
     id: 4,
     category: "Interiors",
-    img: "/interior1.jpg",
+    img: "/hero3.jpg",
     title: "Modern Living Room – Hyderabad",
   },
 ];
