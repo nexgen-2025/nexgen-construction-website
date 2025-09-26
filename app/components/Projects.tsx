@@ -5,58 +5,51 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { useRouter } from "next/navigation";
 
 const projects = [
   {
     id: 1,
     name: "Sobha Heartland II Villas",
-    desc: "4 Bedroom Villas for Rent in Al Barsha, 1 Villas, Al Barsha 1, Al Barsha",
-    price: "$189",
-    rating: "4.83",
+    desc: "A premium residential villa development featuring 4-bedroom luxury homes with landscaped gardens, and contemporary architecture. Nexgen delivered full-scale construction including structural works, interiors, and finishing with premium-grade materials to ensure durability and elegance.",
     img: "/hero3.jpg",
   },
   {
     id: 2,
     name: "Mykonos Damac Lagoons",
-    desc: "2 Bedroom Apartment for Rent in Bilqas Residence, Palm Jumeirah",
-    price: "$560",
-    rating: "4.87",
+    desc: "Inspired by Mediterranean-style living, this project included design and execution of resort-style residences with waterfront views. Our team handled complete civil construction, facade treatments, and interior fit-outs, bringing modern aesthetics blended with natural surroundings.",
     img: "/hero1.jpg",
   },
   {
     id: 3,
     name: "Verdana 2 Residence",
-    desc: "1 Bedroom Apartment for Rent in Continental Tower, Dubai Marina",
-    price: "$231",
-    rating: "4.44",
+    desc: "A contemporary residential apartment complex built to maximize space efficiency and natural light. Nexgen was responsible for architectural planning, structural execution, and turnkey interiors including modular kitchens, smart storage solutions, and modern design finishes.",
     img: "/hero2.jpg",
   },
   {
     id: 4,
     name: "JK Skyline Towers",
-    desc: "Luxury 3BHK Apartments in Downtown Dubai with city views.",
-    price: "$450",
-    rating: "4.91",
+    desc: "High-rise luxury apartments designed for urban living in downtown. The project highlights included reinforced concrete frameworks, high-quality glass facade systems, and premium interiors. Our project management team ensured timely delivery with sustainable construction practices.",
     img: "/hero4.jpg",
   },
   {
     id: 5,
     name: "Palm Beach Villas",
-    desc: "Exclusive beachfront villas with private pools and gardens.",
-    price: "$720",
-    rating: "4.95",
+    desc: "Exclusive beachfront villas offering private pools, landscaped outdoor areas, and bespoke interior solutions. Nexgen executed structural works, villa customization, and luxury interior detailing, ensuring a seamless blend of comfort, style, and durability for coastal living.",
     img: "/hero8.jpg",
   },
 ];
 
 const Projects = () => {
+  const router = useRouter();
+
   return (
     <section className="px-6 md:px-12 lg:px-20 py-12 bg-white">
       {/* Section Heading */}
-      <div className="mb-10">
-        <p className="text-sm text-gray-500">Best projects of the year</p>
+      <div className="mb-10 text-center md:text-left">
+        <p className="text-sm text-gray-500">Highlighted Work</p>
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-          Our recent projects
+          Our Recent Projects
         </h2>
       </div>
 
@@ -66,7 +59,7 @@ const Projects = () => {
         spaceBetween={30}
         slidesPerView={1}
         autoplay={{
-          delay: 2500,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         navigation
@@ -78,7 +71,7 @@ const Projects = () => {
       >
         {projects.map((project) => (
           <SwiperSlide key={project.id}>
-            <div className="rounded-2xl shadow-md overflow-hidden bg-white hover:shadow-lg transition">
+            <div className="flex flex-col h-full rounded-2xl shadow-md overflow-hidden bg-white hover:shadow-xl transition">
               {/* Image */}
               <div className="relative w-full h-56">
                 <Image
@@ -90,24 +83,22 @@ const Projects = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6 flex flex-col justify-between h-[260px]">
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900">
-                    {project.name}
-                  </h3>
-                  <p className="text-sm text-gray-600 mt-2">{project.desc}</p>
-                </div>
+              <div className="flex flex-col flex-1 p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {project.name}
+                </h3>
+                {/* Flex-1 ensures the paragraph takes remaining space */}
+                <p className="text-sm text-gray-600 flex-1 leading-relaxed">
+                  {project.desc}
+                </p>
 
-                <div className="flex items-center justify-between mt-4">
-                  <div>
-                    <p className="text-base font-semibold text-gray-900">
-                      {project.price}
-                      <span className="text-gray-500 text-sm">/night</span>
-                    </p>
-                    <p className="text-sm text-gray-500">⭐ {project.rating}</p>
-                  </div>
-                  <button className="px-4 py-2 bg-black text-white text-sm rounded-full hover:bg-gray-800 transition">
-                    Book Now
+                {/* Button stays at bottom */}
+                <div className="mt-4 flex justify-end">
+                  <button
+                    onClick={() => router.push("/projects")}
+                    className="px-5 py-2 bg-red-600 text-white text-sm font-medium rounded-full hover:bg-red-700 transition"
+                  >
+                    View Project
                   </button>
                 </div>
               </div>

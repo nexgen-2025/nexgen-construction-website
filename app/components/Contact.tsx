@@ -111,14 +111,15 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="mt-8 space-y-4 text-gray-300">
               <p className="flex items-center gap-3">
-                <FaPhoneAlt className="text-[#c0a060]" /> +91 98765 43210
+                <FaPhoneAlt className="text-[#c0a060]" /> +91 63848 77853
               </p>
               <p className="flex items-center gap-3">
-                <FaEnvelope className="text-[#c0a060]" /> contact@nexgen.com
+                <FaEnvelope className="text-[#c0a060]" />{" "}
+                nexgenconstructionsmk@gmail.com
               </p>
               <p className="flex items-center gap-3">
-                <FaMapMarkerAlt className="text-[#c0a060]" /> Nexgen
-                Constructions HQ, Bengaluru, India
+                <FaMapMarkerAlt className="text-[#c0a060]" /> Nexgen #1/134/6,
+                Rayakottai Road GPS Tower,(Opp. Balaji Bhawan) Krishanagiri
               </p>
             </div>
           </div>
