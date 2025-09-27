@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,11 +21,16 @@ const Navbar = () => {
     <nav className="w-full sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
         {/* Logo */}
-        <Link
-          href="/"
-          className="text-2xl font-extrabold tracking-wide text-[#3B1A1E]"
-        >
-          Nexgen
+        {/* Logo */}
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo-bg.jpg"
+            alt="Nexgen Logo"
+            width={150} // Adjust width as needed
+            height={50} // Adjust height as needed
+            className="object-contain"
+            priority // optional: loads faster for navbar
+          />
         </Link>
 
         {/* Desktop Menu */}

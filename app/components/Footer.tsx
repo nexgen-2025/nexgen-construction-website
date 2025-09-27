@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -12,9 +13,13 @@ const Footer = () => {
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         {/* Brand Section */}
         <div>
-          <h2 className="text-3xl font-extrabold text-[#D5B594] tracking-wide">
-            NexGen
-          </h2>
+          <Image
+            src="/logo-bg.jpg" // Replace with your logo path
+            alt="NexGen Logo"
+            width={150} // Adjust width
+            height={50} // Adjust height
+            className="object-contain"
+          />
           <p className="mt-4 text-sm text-[#FDFCFB]/80 leading-relaxed max-w-sm">
             Empowering businesses with innovative design, architecture, and
             digital solutions that turn your dream projects into reality.
