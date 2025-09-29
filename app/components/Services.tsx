@@ -3,6 +3,7 @@ import React from "react";
 import { Home, Building, RefreshCcw, Layers, Layout } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const servicesData = [
   {
@@ -68,10 +69,11 @@ const Services = () => {
           >
             {/* Image */}
             <div className="relative w-full h-48 md:h-56 overflow-hidden">
-              <img
+              <Image
                 src={service.image}
                 alt={service.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                fill
+                className="object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-[#3C191F]/60 via-[#401E23]/30 to-[#D5B594]/10"></div>
             </div>

@@ -46,17 +46,20 @@ const projects = [
 const images = ["/hero1.jpg", "/hero2.jpg", "/hero3.jpg", "/hero4.jpg"];
 const placeholder = "/placeholder.jpg";
 
-// Background image fallback
+// Background image fallback with Next.js Image
 const ImageWithFallback = ({ src, alt }: { src: string; alt: string }) => {
   const [imgSrc, setImgSrc] = useState(src);
 
   return (
-    <img
-      src={imgSrc}
-      alt={alt}
-      className="w-full h-full object-cover opacity-50"
-      onError={() => setImgSrc(placeholder)}
-    />
+    <div className="relative w-full h-full">
+      <Image
+        src={imgSrc}
+        alt={alt}
+        fill
+        className="object-cover opacity-50"
+        onError={() => setImgSrc(placeholder)}
+      />
+    </div>
   );
 };
 

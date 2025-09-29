@@ -30,7 +30,7 @@ const Contact = () => {
       } else {
         toast.error("Failed to send message ❌");
       }
-    } catch (error) {
+    } catch {
       toast.error("Something went wrong ❌");
     } finally {
       setLoading(false);

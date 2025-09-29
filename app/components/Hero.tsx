@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion, Variants } from "framer-motion";
+import Image from "next/image";
 
 // Images array
 const images = [
@@ -9,7 +10,7 @@ const images = [
   "/hero3.jpg",
   "/hero4.jpg",
   "/hero5.jpg",
-  "/hero6.jpg", // Ensure this exists
+  "/hero6.jpg",
   "/hero7.jpg",
   "/hero8.jpg",
   "/hero9.jpg",
@@ -33,9 +34,11 @@ const ImageWithFallback = ({ src, alt }: { src: string; alt: string }) => {
   const [imgSrc, setImgSrc] = useState(src);
 
   return (
-    <img
+    <Image
       src={imgSrc}
       alt={alt}
+      width={1920}
+      height={1080}
       className="w-full h-full object-cover opacity-50"
       onError={() => setImgSrc(placeholder)}
     />

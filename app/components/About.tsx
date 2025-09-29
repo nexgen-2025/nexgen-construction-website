@@ -1,11 +1,12 @@
 import React from "react";
+import Image from "next/image";
 
 const About = () => {
   const stats = [
     { number: "70+", label: "Satisfied Customers" },
     { number: "10+", label: "Ongoing Projects" },
     { number: "30+", label: "Years of Experience" },
-    { number: "70 +", label: "Projects Delivered" },
+    { number: "70+", label: "Projects Delivered" },
   ];
 
   return (
@@ -38,19 +39,25 @@ const About = () => {
 
         {/* Right Side - Images */}
         <div className="grid grid-cols-2 gap-4">
-          <img
-            src="/hero2.jpg" // Replace with your image
+          <Image
+            src="/hero2.jpg"
             alt="Modern Building"
+            width={400}
+            height={200}
             className="rounded-xl shadow-lg w-full h-48 object-cover"
           />
-          <img
-            src="/hero3.jpg" // Replace with your image
+          <Image
+            src="/hero3.jpg"
             alt="Happy Family"
+            width={400}
+            height={200}
             className="rounded-xl shadow-lg w-full h-48 object-cover"
           />
-          <img
-            src="/hero1.jpg" // Replace with your image
+          <Image
+            src="/hero1.jpg"
             alt="Construction Work"
+            width={800}
+            height={400}
             className="rounded-xl shadow-lg w-full h-48 object-cover col-span-2"
           />
         </div>

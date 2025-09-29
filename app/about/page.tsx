@@ -1,12 +1,15 @@
 "use client";
 import React, { useState } from "react";
-import About from "../components/About";
 import Services from "../components/Services";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 import Navbar from "../components/NavBar";
 import WhatsappIcon from "../components/WhatsappIcon";
 import { motion, Variants } from "framer-motion";
+import Image from "next/image";
+
+// Motion-enabled Next.js Image
+const MotionImage = motion(Image);
 
 // Hero background images
 const images = [
@@ -39,16 +42,18 @@ const ImageWithFallback = ({ src, alt }: { src: string; alt: string }) => {
   const [imgSrc, setImgSrc] = useState(src);
 
   return (
-    <img
+    <Image
       src={imgSrc}
       alt={alt}
+      width={1200}
+      height={800}
       className="w-full h-full object-cover opacity-50"
       onError={() => setImgSrc(placeholder)}
     />
   );
 };
 
-const page = () => {
+const Page = () => {
   return (
     <main className="bg-[#FDFCFB] text-[#3A3A3A] overflow-hidden">
       {/* Navbar */}
@@ -115,9 +120,11 @@ const page = () => {
       {/* Story Section */}
       <section className="relative max-w-7xl mx-auto px-6 md:px-12 -mt-24 py-20">
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          <motion.img
+          <MotionImage
             src="/hero3.jpg"
             alt="Our Story"
+            width={600}
+            height={400}
             className="w-full rounded-3xl shadow-lg object-cover border border-[#D5B594]"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -159,7 +166,7 @@ const page = () => {
             </h3>
             <p className="text-[#7A7A7A] leading-relaxed">
               To deliver elegant, thoughtful, and sustainable architectural and
-              interior solutions that bring our clients' visions to life.
+              interior solutions that bring our clients&apos; visions to life.
             </p>
           </motion.div>
           <motion.div
@@ -202,9 +209,11 @@ const page = () => {
               transition={{ duration: 0.8, delay: index * 0.15 }}
               className="bg-[#FFF8F0] p-6 rounded-3xl shadow hover:shadow-lg text-center transition-transform hover:scale-105"
             >
-              <img
+              <Image
                 src={member.img}
                 alt={member.name}
+                width={128}
+                height={128}
                 className="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-2 border-[#D5B594]"
               />
               <h4 className="text-xl font-bold text-[#D5B594]">
@@ -227,4 +236,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

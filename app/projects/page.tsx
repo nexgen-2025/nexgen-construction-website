@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import WhatsappIcon from "../components/WhatsappIcon";
 import Projects from "../components/Projects";
 import { motion, Variants } from "framer-motion";
+import Image from "next/image";
 
 const images = [
   "/hero1.jpg",
@@ -30,20 +31,24 @@ const staggerParent: Variants = {
   visible: { transition: { staggerChildren: 0.2 } },
 };
 
+// ✅ Fixed: Using next/image instead of <img>
 const ImageWithFallback = ({ src, alt }: { src: string; alt: string }) => {
   const [imgSrc, setImgSrc] = useState(src);
 
   return (
-    <img
-      src={imgSrc}
-      alt={alt}
-      className="w-full h-full object-cover opacity-50"
-      onError={() => setImgSrc(placeholder)}
-    />
+    <div className="relative w-full h-full">
+      <Image
+        src={imgSrc}
+        alt={alt}
+        fill
+        className="object-cover opacity-50"
+        onError={() => setImgSrc(placeholder)}
+      />
+    </div>
   );
 };
 
-const page = () => {
+const ProjectsPage = () => {
   return (
     <main className="bg-[#FDFCFB] text-[#3A3A3A] min-h-screen overflow-x-hidden">
       {/* Navbar */}
@@ -61,8 +66,7 @@ const page = () => {
             {[...images, ...images].map((src, i) => (
               <div key={i} className="relative flex-1 h-full">
                 <ImageWithFallback src={src} alt={`bg-${i}`} />
-                <div className="absolute inset-0 bg-black/20"></div>{" "}
-                {/* dim images */}
+                <div className="absolute inset-0 bg-black/20"></div>
               </div>
             ))}
           </motion.div>
@@ -105,4 +109,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ProjectsPage;
