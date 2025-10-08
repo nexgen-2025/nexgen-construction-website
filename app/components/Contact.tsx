@@ -86,6 +86,18 @@ const Contact = () => {
                   placeholder="Enter your email"
                 />
               </div>
+              <div>
+                <label className="block text-sm font-semibold mb-2">
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  name="phone"
+                  required
+                  className="w-full p-3 rounded-md bg-[#0f172a] border border-[#c0a060] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#c0a060]"
+                  placeholder="Enter your phone number"
+                />
+              </div>
 
               <div>
                 <label className="block text-sm font-semibold mb-2">
