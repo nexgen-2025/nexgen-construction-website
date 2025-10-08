@@ -28,12 +28,13 @@ const servicesData = [
     image: "/hero3.jpg",
   },
   {
-    title: "Excavation & Interiors",
+    title: "Turnkey Construction",
     description:
-      "Complete excavation, site preparation, and interior design services tailored to your project. From groundwork to stylish interiors, we provide an end-to-end solution.",
+      "From architectural design to full construction, including interior and exterior finishes, we deliver complete, end-to-end solutions for your home or project, ensuring quality and precision at every stage.",
     icon: <Layers size={36} />,
     image: "/hero4.jpg",
   },
+
   {
     title: "Architecture & Planning",
     description:

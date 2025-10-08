@@ -165,8 +165,11 @@ const Page = () => {
               Our Mission
             </h3>
             <p className="text-[#7A7A7A] leading-relaxed">
-              To deliver elegant, thoughtful, and sustainable architectural and
-              interior solutions that bring our clients&apos; visions to life.
+              To provide comprehensive, end-to-end construction solutions,
+              transforming every project from concept to completion with
+              excellence in design, interior, exterior, and structural
+              execution, ensuring quality, functionality, and client
+              satisfaction at every step.
             </p>
           </motion.div>
           <motion.div
@@ -179,8 +182,10 @@ const Page = () => {
               Our Vision
             </h3>
             <p className="text-[#7A7A7A] leading-relaxed">
-              To be recognized as a trusted, creative, and modern architectural
-              and design firm delivering impactful projects.
+              To be recognized as a leading turnkey construction and design
+              firm, delivering modern, innovative, and complete architectural,
+              interior, and exterior solutions that exceed client expectations
+              and set new standards in the industry.
             </p>
           </motion.div>
         </div>
@@ -198,9 +203,9 @@ const Page = () => {
         </motion.h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {[
-            { name: "John Doe", role: "CEO", img: "/hero1.jpg" },
-            { name: "Jane Smith", role: "Architect", img: "/hero2.jpg" },
-            { name: "Mike Johnson", role: "Lead Designer", img: "/hero4.jpg" },
+            { name: "Asief", role: "CEO", img: "/hero1.jpg" },
+            { name: "Kaif", role: "Architect", img: "/hero2.jpg" },
+            { name: "Aadil", role: "Lead Designer", img: "/hero4.jpg" },
           ].map((member, index) => (
             <motion.div
               key={index}
