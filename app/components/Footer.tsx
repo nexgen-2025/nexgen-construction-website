@@ -117,7 +117,10 @@ const Footer = () => {
           <a href="#" className="hover:text-[#FFD700] transition">
             <Facebook size={20} />
           </a>
-          <a href="#" className="hover:text-[#FFD700] transition">
+          <a
+            href="https://www.instagram.com/nexgen_constructions_devlopers/"
+            className="hover:text-[#FFD700] transition"
+          >
             <Instagram size={20} />
           </a>
           <a href="#" className="hover:text-[#FFD700] transition">
