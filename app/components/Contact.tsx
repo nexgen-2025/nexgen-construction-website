@@ -139,7 +139,7 @@ const Contact = () => {
           {/* Google Map */}
           <div className="rounded-xl overflow-hidden shadow-lg shadow-[0_0_15px_rgba(192,160,96,0.25)]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3894.74373883848!2d78.21146507483355!3d12.533128287743445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac3500187ae53b%3A0x3315ad96e6cf43fe!2sBengaluru!5e0!3m2!1sen!2sin!4v1755332298504!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d973.7072691379011!2d78.20253596775315!3d12.5274797121442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac34a7501d2ecd%3A0x80e7d306e7c63d2e!2s155%2C%20Krishnagiri%20-%20Royakottai%20Rd%2C%20Wahab%20Nagar%2C%20Pochampalli%2C%20Tamil%20Nadu%20635002!5e0!3m2!1sen!2sin!4v1760347128928!5m2!1sen!2sin"
               width="100%"
               height="450"
               className="w-full min-h-[400px] border-0"
