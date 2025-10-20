@@ -10,33 +10,33 @@ import { useRouter } from "next/navigation";
 const projects = [
   {
     id: 1,
-    name: "Sobha Heartland II Villas",
+    name: "Vimala Teacher",
     desc: "A premium residential villa development featuring 4-bedroom luxury homes with landscaped gardens, and contemporary architecture. Nexgen delivered full-scale construction including structural works, interiors, and finishing with premium-grade materials to ensure durability and elegance.",
-    img: "/hero3.jpg",
+    img: "/vimala/elevation2.jpg",
   },
   {
     id: 2,
-    name: "Mykonos Damac Lagoons",
+    name: "Zaheer",
     desc: "Inspired by Mediterranean-style living, this project included design and execution of resort-style residences with waterfront views. Our team handled complete civil construction, facade treatments, and interior fit-outs, bringing modern aesthetics blended with natural surroundings.",
-    img: "/hero1.jpg",
+    img: "/zaheer/elevation1.jpg",
   },
   {
     id: 3,
-    name: "Verdana 2 Residence",
+    name: "Mickal",
     desc: "A contemporary residential apartment complex built to maximize space efficiency and natural light. Nexgen was responsible for architectural planning, structural execution, and turnkey interiors including modular kitchens, smart storage solutions, and modern design finishes.",
-    img: "/hero2.jpg",
+    img: "/mickal/elevation1.jpg",
   },
   {
     id: 4,
-    name: "JK Skyline Towers",
+    name: "Rizwan",
     desc: "High-rise luxury apartments designed for urban living in downtown. The project highlights included reinforced concrete frameworks, high-quality glass facade systems, and premium interiors. Our project management team ensured timely delivery with sustainable construction practices.",
-    img: "/hero4.jpg",
+    img: "/rizwan_bank/elevation1.jpg",
   },
   {
     id: 5,
-    name: "Palm Beach Villas",
+    name: "Aslam",
     desc: "Exclusive beachfront villas offering private pools, landscaped outdoor areas, and bespoke interior solutions. Nexgen executed structural works, villa customization, and luxury interior detailing, ensuring a seamless blend of comfort, style, and durability for coastal living.",
-    img: "/hero8.jpg",
+    img: "/royal_cycle/elevation2.jpg",
   },
 ];
 

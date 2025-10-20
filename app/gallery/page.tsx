@@ -37,8 +37,8 @@ const projects = [
   {
     id: 4,
     category: "Interiors",
-    img: "/hero3.jpg",
-    title: "Modern Living Room – Hyderabad",
+    img: "/vimala/elevation1.jpg",
+    title: "Vimala Teacher",
   },
 ];
 

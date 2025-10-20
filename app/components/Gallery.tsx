@@ -27,8 +27,8 @@ const projects = [
   {
     id: 3,
     category: "Commercial",
-    img: "/hero2.jpg",
-    title: "Corporate Office - Bangalore",
+    img: "/vimala/elevation1.jpg",
+    title: "Corporate Offices - Bangalore",
   },
   {
     id: 4,
