@@ -23,13 +23,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      {/* ✅ Google Analytics Script */}
-      <head>
+      <head />
+      <body>
+        {/* ✅ Google Analytics Script moved outside <head> */}
         <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-VKHPWJVL8X"
@@ -42,11 +43,6 @@ export default function RootLayout({
             gtag('config', 'G-VKHPWJVL8X');
           `}
         </Script>
-      </head>
-
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
         {children}
       </body>
     </html>
