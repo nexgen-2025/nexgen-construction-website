@@ -109,7 +109,15 @@ const Footer = () => {
         <p>
           © {new Date().getFullYear()}{" "}
           <span className="font-semibold text-[#D5B594]">Nexgen</span>. All
-          rights reserved.
+          rights reserved. Developed By{" "}
+          <a
+            href="https://growbranz.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#D5B594] hover:underline"
+          >
+            Grow Branz
+          </a>
         </p>
 
         {/* Social Media */}
