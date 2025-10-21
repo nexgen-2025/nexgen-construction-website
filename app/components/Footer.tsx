@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -16,8 +17,8 @@ const Footer = () => {
           <Image
             src="/logo-bg.jpg" // Replace with your logo path
             alt="NexGen Logo"
-            width={150} // Adjust width
-            height={50} // Adjust height
+            width={150}
+            height={50}
             className="object-contain"
           />
           <p className="mt-4 text-sm text-[#FDFCFB]/80 leading-relaxed max-w-sm">
@@ -33,19 +34,19 @@ const Footer = () => {
           </h3>
           <ul className="space-y-3 text-[#FDFCFB]/90">
             <li className="hover:text-[#FFD700] transition">
-              <a href="#">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li className="hover:text-[#FFD700] transition">
-              <a href="#">About Us</a>
+              <Link href="/about">About Us</Link>
             </li>
             <li className="hover:text-[#FFD700] transition">
-              <a href="#">Services</a>
+              <Link href="/services">Services</Link>
             </li>
             <li className="hover:text-[#FFD700] transition">
-              <a href="#">Projects</a>
+              <Link href="/projects">Projects</Link>
             </li>
             <li className="hover:text-[#FFD700] transition">
-              <a href="#">Contact</a>
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
         </div>
@@ -57,16 +58,16 @@ const Footer = () => {
           </h3>
           <ul className="space-y-3 text-[#FDFCFB]/90">
             <li className="hover:text-[#FFD700] transition">
-              <a href="#">Architecture Design</a>
+              <Link href="/services#architecture">Architecture Design</Link>
             </li>
             <li className="hover:text-[#FFD700] transition">
-              <a href="#">Interior Solutions</a>
+              <Link href="/services#interior">Interior Solutions</Link>
             </li>
             <li className="hover:text-[#FFD700] transition">
-              <a href="#">Civil Engineering</a>
+              <Link href="/services#civil">Civil Engineering</Link>
             </li>
             <li className="hover:text-[#FFD700] transition">
-              <a href="#">Digital Branding</a>
+              <Link href="/services#branding">Digital Branding</Link>
             </li>
           </ul>
         </div>
