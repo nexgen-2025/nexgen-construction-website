@@ -6,13 +6,7 @@ import WhatsappIcon from "../components/WhatsappIcon";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 
-const categories = [
-  "All",
-  "Before & After",
-  "Residential",
-  "Commercial",
-  "Interiors",
-];
+const categories = ["All", "Before & After", "Residential", "Interiors"];
 
 const projects = [
   {
@@ -20,25 +14,43 @@ const projects = [
     category: "Before & After",
     before: "/hero7.jpg",
     after: "/hero5.jpg",
-    title: "Villa Renovation – Coimbatore",
+    title: "Before & After",
   },
   {
     id: 2,
     category: "Residential",
-    img: "/hero1.jpg",
-    title: "Luxury Apartment – Chennai",
+    img: "/vimala/elevation2.jpg",
+    title: "Vimala Teacher",
   },
   {
     id: 3,
-    category: "Commercial",
-    img: "/hero2.jpg",
-    title: "Corporate Office – Bangalore",
+    category: "Interiors",
+    img: "/zaheer/elevation1.jpg",
+    title: "Zaheer",
   },
   {
     id: 4,
     category: "Interiors",
-    img: "/vimala/elevation1.jpg",
-    title: "Vimala Teacher",
+    img: "/mickal/elevation1.jpg",
+    title: "Mickal",
+  },
+  {
+    id: 5,
+    category: "Residential",
+    img: "/royal_cycle/elevation2.jpg",
+    title: "Ajmeer",
+  },
+  {
+    id: 6,
+    category: "Residential",
+    img: "/zaheer/elevation7.jpg",
+    title: "Zaheer",
+  },
+  {
+    id: 7,
+    category: "Residential",
+    img: "/nisar/elevation3.jpg",
+    title: "Nisar",
   },
 ];
 

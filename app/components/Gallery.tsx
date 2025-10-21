@@ -21,20 +21,20 @@ const projects = [
   {
     id: 2,
     category: "Residential",
-    img: "/hero1.jpg",
-    title: "Luxury Apartment - Chennai",
+    img: "/vimala/elevation2.jpg",
+    title: "Vimala Teacher",
   },
   {
     id: 3,
     category: "Commercial",
-    img: "/vimala/elevation1.jpg",
-    title: "Corporate Offices - Bangalore",
+    img: "/zaheer/elevation1.jpg",
+    title: "Zaheer",
   },
   {
     id: 4,
     category: "Interiors",
-    img: "/hero3.jpg",
-    title: "Modern Living Room - Hyderabad",
+    img: "/mickal/elevation1.jpg",
+    title: "Mickal",
   },
 ];
 
