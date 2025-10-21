@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
+import ConsultationPopup from "./ConsultationPopup"; // import popup
 
-// Images array
 const images = [
   "/hero1.jpg",
   "/hero2.jpg",
@@ -16,7 +16,6 @@ const images = [
   "/hero9.jpg",
 ];
 
-// Placeholder image if any image fails to load
 const placeholder = "/placeholder.jpg";
 
 const fadeUp: Variants = {
@@ -29,10 +28,8 @@ const staggerParent: Variants = {
   visible: { transition: { staggerChildren: 0.2 } },
 };
 
-// Image component with fallback
 const ImageWithFallback = ({ src, alt }: { src: string; alt: string }) => {
   const [imgSrc, setImgSrc] = useState(src);
-
   return (
     <Image
       src={imgSrc}
@@ -46,6 +43,8 @@ const ImageWithFallback = ({ src, alt }: { src: string; alt: string }) => {
 };
 
 const Hero = () => {
+  const [showPopup, setShowPopup] = useState(false); // state for popup
+
   return (
     <section className="relative w-full h-[100vh] flex items-center justify-center px-6 md:px-12 overflow-hidden bg-[#331417]">
       {/* Moving Background Image Wall */}
@@ -75,7 +74,6 @@ const Hero = () => {
           variants={staggerParent}
           className="flex flex-col justify-center space-y-6 bg-[#401E23]/60 p-8 rounded-xl"
         >
-          {/* Heading */}
           <motion.h1
             variants={fadeUp}
             className="text-4xl md:text-6xl font-extrabold leading-tight text-[#D5B594] drop-shadow-lg break-words"
@@ -83,7 +81,6 @@ const Hero = () => {
             Empower Your <span className="text-[#FFD700]">Dream Projects</span>
           </motion.h1>
 
-          {/* Subtext */}
           <motion.p
             variants={fadeUp}
             className="text-lg md:text-2xl font-medium text-[#FDFCFB] max-w-md"
@@ -92,15 +89,23 @@ const Hero = () => {
             from concept to completion.
           </motion.p>
 
-          {/* CTA Button */}
           <motion.div variants={fadeUp} className="mt-6">
-            <button className="px-8 py-4 bg-gradient-to-r from-[#D5B594] to-[#3C191F] text-[#FDFCFB] font-semibold rounded-2xl shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 text-lg relative overflow-hidden">
+            <button
+              onClick={() => setShowPopup(true)} // open popup
+              className="px-8 py-4 bg-gradient-to-r from-[#D5B594] to-[#3C191F] text-[#FDFCFB] font-semibold rounded-2xl shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-300 text-lg relative overflow-hidden"
+            >
               <span className="relative z-10">Get Started</span>
               <div className="absolute inset-0 bg-white/10 opacity-0 hover:opacity-20 transition duration-300 rounded-2xl"></div>
             </button>
           </motion.div>
         </motion.div>
       </div>
+
+      {/* Consultation Popup */}
+      <ConsultationPopup
+        showPopup={showPopup}
+        onClose={() => setShowPopup(false)}
+      />
     </section>
   );
 };
