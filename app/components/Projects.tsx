@@ -16,24 +16,18 @@ const projects = [
   },
   {
     id: 2,
-    name: "Zaheer",
-    desc: "A contemporary commercial complex featuring open-plan office spaces and retail areas. Nexgen provided end-to-end construction services including architectural planning, structural execution, and interior detailing to deliver a fully functional commercial hub.",
-    img: "/zaheer/elevation1.jpg",
-  },
-  {
-    id: 3,
     name: "Mickal",
     desc: "A modern multi-use commercial property optimized for efficiency and natural lighting. Nexgen managed all stages of construction from foundation to finishing, including interiors, electrical works, and quality control to meet client expectations.",
     img: "/mickal/elevation1.jpg",
   },
   {
-    id: 4,
+    id: 3,
     name: "Rizwan",
     desc: "A high-rise commercial building designed for urban business needs. Nexgen executed complete construction services, including reinforced concrete frameworks, facade installation, and interior fit-outs, delivering a professional and durable structure.",
     img: "/rizwan_bank/elevation1.jpg",
   },
   {
-    id: 5,
+    id: 4,
     name: "Aslam",
     desc: "A premium commercial facility incorporating modern design and practical workspace solutions. Nexgen handled all aspects of construction, from civil works to interiors and finishing, ensuring a high-standard, fully operational building for the client.",
     img: "/royal_cycle/elevation2.jpg",
