@@ -25,29 +25,17 @@ const projects = [
   {
     id: 3,
     category: "Interiors",
-    img: "/zaheer/elevation1.jpg",
-    title: "Zaheer",
-  },
-  {
-    id: 4,
-    category: "Interiors",
     img: "/mickal/elevation1.jpg",
     title: "Mickal",
   },
   {
-    id: 5,
+    id: 4,
     category: "Residential",
     img: "/royal_cycle/elevation2.jpg",
     title: "Ajmeer",
   },
   {
-    id: 6,
-    category: "Residential",
-    img: "/zaheer/elevation7.jpg",
-    title: "Zaheer",
-  },
-  {
-    id: 7,
+    id: 5,
     category: "Residential",
     img: "/nisar/elevation3.jpg",
     title: "Nisar",
