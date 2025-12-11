@@ -121,7 +121,7 @@ const Page = () => {
       <section className="relative max-w-7xl mx-auto px-6 md:px-12 -mt-24 py-20">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <MotionImage
-            src="/hero3.jpg"
+            src="/nexgen4.jpg"
             alt="Our Story"
             width={600}
             height={400}

@@ -69,7 +69,8 @@ const Contact = () => {
                   type="text"
                   name="name"
                   required
-                  className="w-full p-3 rounded-md bg-[#0f172a] border border-[#c0a060] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#c0a060]"
+                  className="w-full p-3 rounded-md bg-[#0f172a] border border-[#c0a060] text-white 
+                  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#c0a060]"
                   placeholder="Enter your name"
                 />
               </div>
@@ -82,10 +83,12 @@ const Contact = () => {
                   type="email"
                   name="email"
                   required
-                  className="w-full p-3 rounded-md bg-[#0f172a] border border-[#c0a060] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#c0a060]"
+                  className="w-full p-3 rounded-md bg-[#0f172a] border border-[#c0a060] text-white 
+                  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#c0a060]"
                   placeholder="Enter your email"
                 />
               </div>
+
               <div>
                 <label className="block text-sm font-semibold mb-2">
                   Phone Number
@@ -94,7 +97,8 @@ const Contact = () => {
                   type="tel"
                   name="phone"
                   required
-                  className="w-full p-3 rounded-md bg-[#0f172a] border border-[#c0a060] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#c0a060]"
+                  className="w-full p-3 rounded-md bg-[#0f172a] border border-[#c0a060] text-white 
+                  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#c0a060]"
                   placeholder="Enter your phone number"
                 />
               </div>
@@ -106,7 +110,8 @@ const Contact = () => {
                 <textarea
                   name="message"
                   required
-                  className="w-full p-3 rounded-md bg-[#0f172a] border border-[#c0a060] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#c0a060]"
+                  className="w-full p-3 rounded-md bg-[#0f172a] border border-[#c0a060] text-white 
+                  placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#c0a060]"
                   placeholder="Write your message..."
                 ></textarea>
               </div>
@@ -114,7 +119,9 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-3 bg-gradient-to-r from-[#c0a060] to-[#ffd700] text-black font-bold rounded-md hover:opacity-90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-3 bg-gradient-to-r from-[#c0a060] to-[#ffd700] text-black font-bold 
+                rounded-md hover:opacity-90 transition-all duration-300 disabled:opacity-50 
+                disabled:cursor-not-allowed"
               >
                 {loading ? "Sending..." : "Send Message"}
               </button>
@@ -129,9 +136,10 @@ const Contact = () => {
                 <FaEnvelope className="text-[#c0a060]" />{" "}
                 nexgenconstructionsmk@gmail.com
               </p>
-              <p className="flex items-center gap-3">
-                <FaMapMarkerAlt className="text-[#c0a060]" /> Nexgen #1/134/6,
-                Rayakottai Road GPS Tower,(Opp. Balaji Bhawan) Krishanagiri
+              <p className="flex items-center gap-3 leading-relaxed">
+                <FaMapMarkerAlt className="text-[#c0a060]" />
+                Nexgen Constructions & Developers, #1/134/6, Rayakottai Road,
+                GPS Tower (Opp. Balaji Bhawan), Krishnagiri
               </p>
             </div>
           </div>
@@ -139,12 +147,12 @@ const Contact = () => {
           {/* Google Map */}
           <div className="rounded-xl overflow-hidden shadow-lg shadow-[0_0_15px_rgba(192,160,96,0.25)]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d973.7072691379011!2d78.20253596775315!3d12.5274797121442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac34a7501d2ecd%3A0x80e7d306e7c63d2e!2s155%2C%20Krishnagiri%20-%20Royakottai%20Rd%2C%20Wahab%20Nagar%2C%20Pochampalli%2C%20Tamil%20Nadu%20635002!5e0!3m2!1sen!2sin!4v1760347128928!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3894.8318132774584!2d78.20036177454013!3d12.527298524464637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac351bbf941f3b%3A0xe44870e8e18011a5!2sNexgen%20Constructions%20and%20Developers!5e0!3m2!1sen!2sin!4v1765431058524!5m2!1sen!2sin"
               width="100%"
               height="450"
               className="w-full min-h-[400px] border-0"
               loading="lazy"
-              title="Nexgen Location Map"
+              title="Nexgen Constructions & Developers Location"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
